@@ -147,57 +147,10 @@
       <!-- /.navigation -->
 
       <!-- Slider -->
-
-      <div id="slider" class="owl-carousel"></div>
-
-      <!-- <div id="slider" class="loading has-parallax">
-        <div id="loading-icon"><i class="fa fa-cog fa-spin"></i></div>
-        <div class="owl-carousel homepage-slider carousel-full-width">
-          <div class="slide">
-            <div class="container">
-              <div class="overlay">
-                <div class="info">
-                  <div class="tag price">$ 11,000</div>
-                  <h3>3398 Lodgeville Road</h3>
-                  <figure>Golden Valley, MN 55427</figure>
-                </div>
-                <hr />
-                <a href="property-detail.html" class="link-arrow">Read More</a>
-              </div>
-            </div>
-            <img alt="" src="assets/img/slide-01.jpg" />
-          </div>
-          <div class="slide">
-            <div class="container">
-              <div class="overlay">
-                <div class="info">
-                  <div class="tag price">$ 16,000</div>
-                  <h3>987 Cantebury Drive</h3>
-                  <figure>Chicago, IL 60610</figure>
-                </div>
-                <hr />
-                <a href="property-detail.html" class="link-arrow">Read More</a>
-              </div>
-            </div>
-            <img alt="" src="assets/img/slide-02.jpg" />
-          </div>
-          <div class="slide">
-            <div class="container">
-              <div class="overlay">
-                <div class="info">
-                  <div class="tag price">$ 28,500</div>
-                  <h3>1866 Clement Street</h3>
-                  <figure>Atlanta, GA 30303</figure>
-                </div>
-                <hr />
-                <a href="property-detail.html" class="link-arrow">Read More</a>
-              </div>
-            </div>
-            <img alt="" src="assets/img/slide-03.jpg" />
-          </div>
-        </div>
-      </div> -->
-
+      <div
+        id="slider"
+        class="owl-carousel homepage-slider carousel-full-width"
+      ></div>
       <!-- end Slider -->
 
       <!-- Page Content -->
@@ -220,23 +173,23 @@
             <header class="section-title"><h2>Our Services</h2></header>
             <div class="row">
               <div class="col-md-4 col-sm-4">
-                <!-- <div class="feature-box equal-height">
+                <div class="feature-box equal-height">
                   <figure class="icon"><i class="fa fa-folder"></i></figure>
                   <aside class="description">
                     <header><h3>Wide Range of Properties</h3></header>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit
                     </p>
-                    <a href="properties-listing.html" class="link-arrow"
+                    <!-- <a href="properties-listing.html" class="link-arrow"
                       >Read More</a
-                    >
+                    > -->
                   </aside>
-                </div> -->
+                </div>
                 <!-- /.feature-box -->
               </div>
               <!-- /.col-md-4 -->
               <div class="col-md-4 col-sm-4">
-                <!-- <div class="feature-box equal-height">
+                <div class="feature-box equal-height">
                   <figure class="icon"><i class="fa fa-users"></i></figure>
                   <aside class="description">
                     <header><h3>14 Agents for Your Service</h3></header>
@@ -244,11 +197,11 @@
                       Aliquam gravida magna et fringilla convallis. Pellentesque
                       habitant morbi
                     </p>
-                    <a href="agents-listing.html" class="link-arrow"
+                    <!-- <a href="agents-listing.html" class="link-arrow"
                       >Read More</a
-                    >
+                    > -->
                   </aside>
-                </div> -->
+                </div>
                 <!-- /.feature-box -->
               </div>
               <!-- /.col-md-4 -->
@@ -261,7 +214,7 @@
                       Phasellus non viverra tortor, id auctor leo. Suspendisse
                       id nibh placerat
                     </p>
-                    <a href="#" class="link-arrow">Read More</a>
+                    <!-- <a href="#" class="link-arrow">Read More</a> -->
                   </aside>
                 </div>
                 <!-- /.feature-box -->
@@ -756,7 +709,7 @@
           <!-- /.container-->
         </section>
         <!-- /#new-properties-->
-        <!-- <section id="testimonials" class="block">
+        <section id="testimonials" class="block">
           <div class="container">
             <header class="section-title"><h2>Testimonials</h2></header>
             <div class="owl-carousel testimonials-carousel">
@@ -790,9 +743,9 @@
               </blockquote>
             </div>
           </div>
-        </section> -->
+        </section>
         <!-- /#testimonials -->
-        <!-- <section id="partners" class="block">
+        <section id="partners" class="block">
           <div class="container">
             <header class="section-title"><h2>Our Partners</h2></header>
             <div class="logos">
@@ -823,10 +776,10 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
       </div>
 
-      <!-- <footer id="page-footer">
+      <footer id="page-footer">
         <div class="inner">
           <aside id="footer-main">
             <div class="container">
@@ -920,7 +873,7 @@
             </div>
           </aside>
         </div>
-      </footer> -->
+      </footer>
     </div>
 
     <div id="overlay"></div>
@@ -954,87 +907,7 @@
     ></script>
     <script type="text/javascript" src="assets/js/retina-1.1.0.min.js"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
-    <!--[if gt IE 8]>
-      <script type="text/javascript" src="assets/js/ie.js"></script>
-    <![endif]-->
 
-    <script>
-      $(document).ready(function () {
-        $.ajax({
-          url: "https://localhost:7145/Slider",
-          headers: {
-            "X-Requested-With": "XMLHttpRequest",
-          },
-          method: "GET",
-          dataType: "json",
-          success: function (data) {
-            console.log(data);
-
-            // Clear existing slider content
-            $("#slider").empty();
-
-            data.forEach(function (item) {
-              // Create HTML for each slide
-              var slide =
-                '<div class="item">' +
-                '<img src="' +
-                "https://localhost:7145/" +
-                item.image +
-                '" alt="' +
-                item.name +
-                '">' +
-                '<div class="slide-info">' +
-                "<h3>" +
-                item.name +
-                "</h3>" +
-                "<p>Price: $" +
-                item.price +
-                "</p>" +
-                "<p>Address: " +
-                item.address +
-                "</p>" +
-                "</div>" +
-                "</div>";
-
-              // Append the slide to the slider container
-              $("#slider").append(slide);
-            });
-
-            // Initialize the Owl Carousel after updating the content
-            $("#slider").owlCarousel({
-              items: 1,
-              loop: true,
-              autoplay: true,
-              autoplayTimeout: 3000, // Adjust as needed
-              // Add other options as needed
-            });
-          },
-          error: function (error) {
-            console.error("Error fetching data:", error);
-          },
-        });
-      });
-    </script>
+    <script src="assets/homePage.js"></script>
   </body>
 </html>
-
-<!-- <script>
-    // Make an AJAX request using fetch
-    fetch("https://localhost:7145/Slider", {
-      headers: {
-        "X-Requested-With": "XMLHttpRequest",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        // Handle the JSON data received from the server
-        console.log(data);
-        // You can update your admin panel content based on the data
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  </script> -->
